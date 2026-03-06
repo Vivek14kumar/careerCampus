@@ -19,10 +19,10 @@ import Contact from "./pages/Contact";
 /* Auth Pages */
 import Login from "./pages/auth/LoginPage";
 import Signup from "./pages/auth/Signup";
-//import AppLogin from "./pages/app/auth/AppLogin";
-//import AppSignup from "./pages/app/auth/AppSignup";
+import AppLogin from "./pages/app/auth/AppLogin";
+import AppSignup from "./pages/app/auth/AppSignup";
 import ForgotPassword from "./pages/auth/ForgotPassword";
-//import AppForgotPassword from "./pages/app/auth/AppForgotPassword";
+import AppForgotPassword from "./pages/app/auth/AppForgotPassword";
 import AdminSignup from "./pages/auth/AdminSignup";
 import VerifyEmail from "./pages/auth/VerifyEmail";
 
@@ -30,15 +30,15 @@ import VerifyEmail from "./pages/auth/VerifyEmail";
 import DashboardHome from "./pages/admin/DashboardHome";
 import AddCourseForm from "./pages/admin/AddCourse";
 import UploadPhoto from "./pages/admin/UploadPhoto";
-//import UploadPDF from "./pages/admin/UploadNotes";
-//import UploadResultsForm from "./pages/admin/UploadResultsForm";
+import UploadPDF from "./pages/admin/UploadNotes";
+import UploadResultsForm from "./pages/admin/UploadResultsForm";
 
-/* User Dashboard Pages 
+/* User Dashboard Pages */
 import UserDashboard from "./pages/user/UserDashboard";
 import StudentCourses from "./pages/user/StudentCourses";
 import StudentNotes from "./pages/user/StudentNotes";
 import StudentResults from "./pages/user/StudentResults";
-import StudentProfile from "./pages/user/StudentProfile";*/
+import StudentProfile from "./pages/user/StudentProfile";
 
 export default function App() {
   return (
@@ -74,11 +74,11 @@ export default function App() {
           <Route index element={<DashboardHome />} />
           <Route path="add-course" element={<AddCourseForm />} />
           <Route path="upload-photo" element={<UploadPhoto />} />
-          {/*<Route path="upload-pdf" element={<UploadPDF sheetName="pdfs" />} />
-          <Route path="upload-result" element={<UploadResultsForm />} />*/}
+          <Route path="upload-pdf" element={<UploadPDF sheetName="pdfs" />} />
+          <Route path="upload-result" element={<UploadResultsForm />} />
         </Route>
 
-        {/* ================= STUDENT ================= 
+        {/* ================= STUDENT ================= */}
 <Route path="/student">
   <Route index element={<Navigate to="dashboard" replace />} />
 
@@ -130,7 +130,7 @@ export default function App() {
 
 <Route path="/app/login" element={<AppLogin />} />
 <Route path="/app/signup" element={<AppSignup />} />
-<Route path="/app/forgot-password" element={<AppForgotPassword />} />*/}
+<Route path="/app/forgot-password" element={<AppForgotPassword />} />
 
         {/* ========= BACKWARD COMPAT ========= 
         <Route path="/dashboard/*" element={<Navigate to="/student/dashboard" replace />} />
